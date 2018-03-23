@@ -1,0 +1,268 @@
+@import './base/base.less';
+@363:#363636;
+/****blog in seting***/
+//blog管理内容ul,li设置;
+.zm-dialog-pageBox {
+    width: 286px;
+    height: 524px;
+    border:1px solid @baseColor;
+    .zm-dialog-pageList {
+        li {
+            width: 286px;
+            height: 40px;
+            line-height: 40px;
+            list-style: none;
+            position: relative;
+            border-bottom: 1px solid @gray3;
+            cursor: pointer;
+            span {
+                display: none;
+            }
+            .zm-dialog-serialNumber {
+                float: left;
+                line-height: 36px;
+                font-style: italic;
+                margin-left: 10px;
+                width: 14px;
+                display: block;
+            }
+            .zm-dialog-pageList-title {
+                float: left;
+                height: 26px;
+                line-height: 26px;
+                margin: 6px 15px 0 10px;
+                padding-left: 5px;
+                width: 176px;
+                text-overflow: ellipsis;
+                border-radius: 3px;
+                background-color: transparent;
+                border: 1px solid transparent;
+                cursor: pointer;
+            }
+            .onFocus {
+                border: 1px solid @baseColor;
+                box-shadow: 0 0 5px @baseColor;
+            }
+            input::-webkit-input-placeholder {
+                color: @black;
+            }
+            input::-moz-placeholder {
+                color: @black;
+            }
+            input:-ms-input-placeholder {
+                color: @black;
+            }
+            .onError {
+                box-shadow: 0 0 5px @f60;
+                border: 1px solid @f60;
+            }
+            .zm-dialog-eye {
+                float: left;
+                line-height: 36px;
+                width: 20px;
+                height: 20px;
+                padding-top: 5px;
+                svg {
+                    fill: @baseColorLight2;
+                }
+                svg.eyeOn {
+                    fill: @baseColor;
+                }
+                svg.eyeOff {
+                    fill: @baseColorLight2;
+                }
+            }
+            .zm-dialog-setting {
+                width: 20px;
+                height: 35px;
+                padding-top: 5px;
+                margin-left: 8px;
+                outline: none;
+                float: left;
+                line-height: 36px;
+                svg {
+                    fill: @baseColorLight2;
+                }
+            }
+            span.setKey {
+                svg {
+                    fill: @baseColor;
+                }
+            ;
+            }
+            .zm-dialog-nameError{
+                height: 13px;
+                width: 13px;
+                display: block;
+                position: relative;
+                top: 12px;
+                right: 77px;
+                svg{
+                    fill: @f60;
+                    position: absolute;
+                }
+                }
+                .zm-dialog-nameErrorText{
+                width: 223px;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 8px;
+                background-color: @fdc;
+                color: @fontColor;
+                font-size: 12px;
+                position: absolute;
+                left: 1px;
+                top: 36px;
+                border: 1px solid @f60;
+                border-radius: 2px;
+                z-index: 35;
+                }
+                .zm-dialog-nameErrorText:before{
+                content: '';
+                display: block;
+                width:0;
+                height: 0;
+                box-sizing: border-box;
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+                border-bottom: 9px solid @fdc;
+                position: absolute;
+                top:-9px;
+                right: 11px;
+                z-index: 33;
+                }
+                .zm-dialog-nameErrorText:after{
+                content: '';
+                display: block;
+                width:0;
+                height: 0;
+                box-sizing: border-box;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid @f60;
+                position: absolute;
+                top: -10px;
+                right: 10px;
+                }
+                .zm-dialog-renameError{
+                width: 84px;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 8px;
+                background-color: @fdc;
+                color: @fontColor;
+                font-size: 12px;
+                position: absolute;
+                left: 184px;
+                top: 36px;
+                border: 1px solid @f60;
+                border-radius: 2px;
+                z-index: 35;
+                }
+                .zm-dialog-renameError:before{
+                content: '';
+                display: block;
+                width:0;
+                height: 0;
+                box-sizing: border-box;
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+                border-bottom: 9px solid @fdc;
+                position: absolute;
+                top:-9px;
+                right: 53px;
+                z-index: 33;
+                }
+                .zm-dialog-renameError:after{
+                content: '';
+                display: block;
+                width:0;
+                height: 0;
+                box-sizing: border-box;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid @f60;
+                position: absolute;
+                top: -10px;
+                right: 52px;
+                }
+            .zm-dialog-carousel-onePageShow {
+                svg {
+                    fill: @baseColorLight2;
+                }
+            }
+            .zm-dialog-setting:before {
+                content: "";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                height: 0;
+            }
+        }
+        .onlay {
+            background-color: @baseColorLight4;
+            span {
+                display: block;
+            }
+        }
+        .wrong {
+            span {
+                display: block;
+            }
+        }
+        .onlayclick {
+            background-color: @baseColorLight3;
+            span {
+                display: block;
+            }
+        }
+    }
+}
+//选择博客设置;
+.zm-dialog-check {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid @gray3;
+    padding-top: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px @blackOpa2;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: linear-gradient(@white, @gray4);
+    text-align: center;
+    cursor: pointer;
+    .zm-dialog-check-button {
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 3px;
+        color: @white;
+        background-color: @baseColor;
+    }
+}
+.zm-dialog-check-button:hover{
+    cursor:pointer;
+}
+.zm-dialog-carousel-pageSetBox {
+position: absolute;
+border: 1px solid @baseColor;
+width: 176px;
+left: 305px;
+border-radius: 3px;
+display: none;
+    > div {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 30px;
+        background-color: @white;
+        cursor: pointer;
+    }
+    > div:nth-child(1) {
+        border-radius: 3px 3px 0 0;
+    }
+    > div:last-child {
+        border-radius: 0 0 3px 3px;
+    }
+}

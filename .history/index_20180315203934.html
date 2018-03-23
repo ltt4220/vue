@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>zmEditor</title>
+		<link href="//at.alicdn.com/t/font_384873_ie5wx7tu9z3nb3xr.css"/>
+    <script src="/static/zmEditor.js"></script>
+	<script src="/static/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <div id="setpanel">
+			<li :is="item.component" :prop="item.prop" v-for="item in items"></li>
+		</div>
+		<hr />
+		<div id="actionpanel">
+			<li :is="item.component" :prop="item.prop" v-for="item in items"></li>
+		</div>
+		<hr />
+		<div id="com">
+			<button @click="addButton('test')">添加按钮</button>
+			<button @click="addBlog()">添加boke</button>
+			<button @click="addLogo('/static/logo.png')">添加LOGO</button>
+			<button @click="removeCom()">删除组件</button>
+			<button @click="removeCom()">blog组件</button>
+			<hr />
+			<li :is="item.component" :prop="item.prop" v-for="item in items"></li>
+		</div>
+  </body>
+</html>
